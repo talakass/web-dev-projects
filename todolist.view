@@ -1,0 +1,189 @@
+<style>
+    main {
+        background-color: #a39bd2;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #494a4b;
+        font-family: "Gochi Hand", cursive;
+
+    }
+
+    @media only screen and (min-width: 500px) {
+        main {
+            min-height: 100vh;
+        }
+    }
+
+    .contain {
+        min-height: 500px;
+        max-width: 500px;
+        min-width: 250px;
+        background: #f1f5f8;
+        background-size: 25px 25px;
+        border-radius: 20px;
+        box-shadow: 4px 3px 7px 2px #00000040;
+        padding: 1rem;
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .heading__title {
+        transform: rotate(2deg);
+        padding: 0.2rem 1.2rem;
+        border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+        background-color: rgba(0, 255, 196, 0.7);
+    }
+
+    @media only screen and (min-width: 500px) {
+        .heading__title {
+            font-size: 2rem;
+        }
+    }
+
+    .form__label {
+        display: block;
+        margin-bottom: 0.5rem;
+
+    }
+
+    .form__input {
+        background-color: transparent;
+        padding: 0.7rem;
+        border-bottom-right-radius: 15px 3px;
+        border-bottom-left-radius: 3px 15px;
+        border: solid 3px transparent;
+        border-bottom: dashed 3px #ea95e0;
+        font-family: "Gochi Hand", cursive;
+        font-size: 1rem;
+        color: rgba(63, 62, 65, 0.7);
+
+    }
+
+    .form__input:focus {
+        outline: none;
+        border: solid 3px #ea95e0;
+    }
+
+    @media only screen and (min-width: 500px) {
+        .form__input {
+            width: 60%;
+        }
+    }
+
+    .button {
+        transform: rotate(4deg);
+        transform-origin: center;
+        font-family: "Gochi Hand", cursive;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 #494a4b;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background-color: rgba(0, 255, 196, 0.7);
+    }
+
+    .button span {
+        background: #f1f5f8;
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 2px solid #494a4b;
+    }
+
+    .button:active,
+    .button:focus {
+        transform: translateY(4px);
+        padding-bottom: 0px;
+        outline: 0;
+    }
+
+    .toDoList li {
+        position: relative;
+        padding: 0.5rem;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .toDoList li.active {
+        text-decoration: line-through wavy #24bffb;
+    }
+
+    .delete-button {
+        background-color: #ff6b6b;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+</style>
+
+
+<div class="mhv100">
+    <div class="main cc mhv70 c">
+        <section class="contain w100 ha">
+            <div class="heading">
+                <h1 class="heading__title">To-Do List</h1>
+            </div>
+            <form class="form">
+                <div>
+                    <label class="form__label b" for="todo"> Today I need to </label>
+                    <input class="form__input w70 mb20" type="text" id="todo" name="to-do" size="30" required>
+                    <button class="button p0 b0 pb3" @click="addTask"><span>Add</span></button>
+                </div>
+            </form>
+            <div>
+                <ul class="toDoList l" sort></ul>
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<script>
+
+    var myArray = [];
+
+    const taskInput = document.querySelector('.form__input');
+    const addTaskButton = document.querySelector('.button');
+    const taskList = document.querySelector('.toDoList');
+
+    function addTask(event) {
+        event.preventDefault();
+        const taskText = taskInput.value;
+        var myObject = { taskText: taskInput.value };
+        myArray.push(myObject);
+        console.log(myArray);
+
+        if (taskText) {
+            const taskItem = document.createElement('li');
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = "delete";
+            deleteButton.style.fontSize = "13px";
+            taskItem.textContent = taskText;
+
+            deleteButton.classList.add('delete-button');
+            deleteButton.addEventListener('click', () => {
+                taskItem.remove();
+            });
+
+            taskList.appendChild(taskItem);
+            taskItem.appendChild(deleteButton);
+
+            taskInput.value = '';
+        }
+    }
+
+
+
+</script>

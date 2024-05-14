@@ -1,0 +1,234 @@
+<style>
+    body {
+        background-color: #0E0E0E;
+    }
+
+    .list-icons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 37px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: black;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    .slider.rounded:before {
+        border-radius: 50%;
+    }
+</style>
+
+<div class="main w33 mhv100 g_nm c ">
+    <div class="container pv15" style="background-color: #FFFFFF;">
+        <grid_nm>
+            <div class="top-cont w80 l">
+                <div class="top-cont-1 ">
+                    <span class="b fs25">AVG-10921</span>
+                    <span class="mdi mdi-triangle-small-up fs20" style="color: blue;"></span>
+                    <span class="mdi mdi-lightning-bolt fs20 l" style="color: #F1C87F;"></span>
+                    <span class="mdi mdi-circle fs10 cb40"></span>
+                    <span class="fs14" style="color: #c7cece">VDA</span>
+                    <span class="fs14" style="color: #c7cece">1.30</span>
+                </div>
+                <div class="top-cont-2">
+                    <div class=" g_nm lightning ">
+                        <span class="mdi mdi-light-flood-up fs25 cb40"></span>
+                        <span class="fs15 b">light</span>
+                    </div>
+                    <div class=" g_nm green-online ph15 border fs15 b">
+                        <span class="mdi mdi-circle fs16 lh30" style="color: green;"></span>
+                        <span>Online</span>
+                    </div>
+                    <span class="border fs15 b ph15 p5">in Fleet</span>
+                </div>
+            </div>
+            <div class="close-circle w20 vt">
+                <div class="inside-circle roundc" style="background-color: #F2F3F3; width: 50px; height: 50px;">
+                    <span class="mdi mdi-close fs25 lh50 b900 cb20 "></span>
+                </div>
+            </div>
+        </grid_nm>
+        <div class="list-icons pt50">
+            <div class="icon-1 roundc" style="background-color: #2C2E30; width: 50px; height: 50px;">
+                <span class="mdi mdi-plus cw lh50 fs30"></span>
+                <div class="title-icon1 b">Manual</div>
+            </div>
+            <div class="icon-2 roundc" style="background-color: #F3F4F4;width: 50px;height: 50px;">
+                <span class="mdi mdi-pause-circle-outline cb30 lh50 fs30"></span>
+                <div class="title-icon2 b">Charge</div>
+            </div>
+            <div class="icon-3 roundc" style="background-color: #F3F4F4; width: 50px; height: 50px;">
+                <span class="mdi mdi-alpha-p-circle-outline cb30 lh50 fs30"></span>
+                <div class="title-icon3 b">Park</div>
+            </div>
+            <div class="icon-4 roundc" style="background-color: #F3F4F4;width: 50px;height: 50px;">
+                <span class="mdi mdi-bookmark-outline cb30 lh50 fs30"></span>
+                <div class="title-icon4 b">Follow</div>
+            </div>
+
+        </div>
+
+        <grid_nm class="list-2 border pt20 mt30 pv20">
+            <div class="battery w30 ">
+
+                <span class="mdi mdi-battery-charging-medium fs25" style="color: green;"></span>
+                <span class=" b ">75%</span>
+
+                <span class="title-battery db ">Capacity</span>
+            </div>
+            <div class="operation w40 ">
+                <span class=" b lh30">Automatic</span>
+                <span class="title-battery db">Operation Mode</span>
+            </div>
+            <div class="part w30">
+                <span class="mdi mdi-circle-opacity fs25" style="color: #5267C8;"></span>
+                <span class=" b">Partial</span>
+                <span class="title-battery db">Operation Mode</span>
+            </div>
+        </grid_nm>
+        <grid_nm class="list-3 border pt30 ph25 mt10 pv20">
+            <div class="left-side w60 l">
+                <div class="left-side-top">
+                    <span class="mdi mdi-train-car-box g_nm bgb cw c" style="width: 20px; height: 20px;"></span>
+                    <span class="b fs20">SYN-10921</span>
+                    <span class="mdi mdi-close-circle-multiple-outline fs20 b" style="color: #5267C8;"></span>
+                </div>
+                <div class="left-side-btm">
+                    <span style="color: #BEC0C2;">D52...2974</span>
+                    <span class="mdi mdi-content-copy" style="color: #BEC0C2;"></span>
+                </div>
+            </div>
+            <div class=" right-side vt w40 r">
+                <label class="switch" style=" position: relative;display: inline-block; width: 60px; height: 34px;">
+                    <input type="checkbox" checked>
+                    <span class="slider rounded" style="  border-radius: 2rem;"></span>
+                </label>
+            </div>
+        </grid_nm>
+        <div class="list-4 border ph25 p20">
+            <grid_nm class="1st">
+                <div class="w35 l fs16" style="color: #BEC0C2;">position</div>
+                <div class="w65 r fs16 b">87,01 m /2.50 m /180.00</div>
+            </grid_nm>
+            <grid_nm class="2nd">
+                <div class="w35 l fs16" style="color: #BEC0C2;">VDA serial</div>
+                <div class="w65 r fs16 b">No.S-083011</div>
+            </grid_nm>
+            <grid_nm class="3rd">
+                <div class="w35 l fs16" style="color: #BEC0C2;">Order Mode</div>
+                <div class="w65 r fs16 b">Automatic</div>
+            </grid_nm>
+            <grid_nm class="4th">
+                <div class="w35 l fs16" style="color: #BEC0C2;">Vendor</div>
+                <div class="w65 r fs16 b">SYNAOS</div>
+            </grid_nm>
+        </div>
+
+        <div class="title-between l b" style="color: #BEC0C2;">RELATED ORDERS</div>
+
+        <grid_nm class="list-5 border pv20 ph25" style="background-color: #F7F7F8;">
+            <div class="left-side-2 w60 l">
+                <div class="left-side-2-top">
+                    <span class="mdi mdi-alpha-t-box fs30" style="color: #EE6262;"></span>
+                    <span class="b fs20">0x93u...2983</span>
+                </div>
+                <div class="left-side-2-btm">
+                    <span style="color: #BEC0C2;">Transport Order</span>
+
+                </div>
+            </div>
+            <div class=" right-side-2 w40 r">
+
+                <div class="right-side-2-top round2x border g_nm">
+                    <span class="mdi mdi-circle fs20 lh30" style="color: #EE6262; "></span>
+                    <span class="b " style="color: #EE6262; ">+15 min</span>
+                </div>
+                <div class="right-side-2-btm" style="color: #BEC0C2;">Forecast</div>
+
+            </div>
+        </grid_nm>
+
+        <grid_nm class="list-6 border pv20" style="background-color: #F7F7F8;">
+            <div class="left-side-3 w33 ">
+                <div class="left-side-3-top">
+                    <span class="b fs16">12:02</span>
+                    <span class="b fs16" style="color: #61C389;">Started</span>
+                </div>
+                <div class="left-side-3-mid">
+                    <span class="mdi mdi-arrow-top-right fs16 cb40 "></span>
+                    <span class="b fs16">R0262</span>
+                </div>
+                <div class="left-side-3-btm b" style="color: #BEC0C2;">Origin</div>
+            </div>
+            <div class="middle-side-6 w33 vt">
+                <span class="mdi mdi-transit-connection-horizontal fs50"></span>
+            </div>
+            <div class="right-side-3 w33 ">
+                <div class="right-side-3-top">
+                    <span class="b">In progress</span>
+                    <span class="b">12:04</span>
+                </div>
+                <div class="right-side-3-mid">
+                    <span class="mdi mdi-arrow-bottom-right-thin fs16" style="color: #BEC0C2;"></span>
+                    <span class="b fs16">HS019</span>
+                </div>
+                <div class="right-side-3-btm b" style="color: #BEC0C2;">Destination</div>
+            </div>
+        </grid_nm>
+        <grid_nm class="last-list border pv10 l ph20" style="background-color: #F7F7F8;">
+            <div class="box-1 border g_nm mr5 ph5">
+                <span class="mdi mdi-archive-outline cb40 fs22"></span>
+                <span class="b fs16">1/2</span>
+            </div>
+            <div class="box-2 border g_nm mr5 ph5">
+                <span class="mdi mdi-content-save cb40 fs22"></span>
+                <span class="b fs16">2</span>
+            </div>
+            <div class="box-3 border g_nm mr5 ph5">
+                <span class="mdi mdi-lightning-bolt cb40 fs22"></span>
+                <span class="b fs16">2/5</span>
+            </div>
+        </grid_nm>
+    </div>
+</div>

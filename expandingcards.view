@@ -1,0 +1,57 @@
+<style>
+    .image-1 {
+        background-image: url("https://miro.medium.com/v2/resize:fit:720/0*DbO2uFBP1qzlgQjz");
+        border-radius: 60px;
+        width: 55%;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+
+    }
+
+    .image-2 {
+        background-image: url("https://images.pexels.com/photos/3464632/pexels-photo-3464632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        height: 200px;
+        width: 8%;
+        height: 600px;
+        border-radius: 60px;
+        background-repeat: no-repeat;
+        display: inline-block;
+
+
+    }
+
+    .image-3 {
+        background-image: url("https://images.pexels.com/photos/16776159/pexels-photo-16776159/free-photo-of-water-around-rocks-on-shore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        height: 200px;
+        width: 8%;
+        height: 600px;
+        border-radius: 60px;
+        background-repeat: no-repeat;
+        display: inline-block;
+
+    }
+
+    .image-4 {
+        background-image: url("https://images.pexels.com/photos/1905054/pexels-photo-1905054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        height: 200px;
+        width: 8%;
+        height: 600px;
+        border-radius: 60px;
+        background-repeat: no-repeat;
+        display: inline-block;
+
+    }
+</style>
+
+<div class="main ">
+    <div class="container">
+
+        <div class="image-1 mb40 mr50"></div>
+        <div class="image-2 m10"></div>
+        <div class="image-3 m10"></div>
+        <div class="image-4 m10"></div>
+
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<style>
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        background-color: #2A4E6C;
+    }
+
+    .nav-items {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        list-style: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    .logo {
+        color: white;
+        transition: background-color 0.5s ease, padding 0.5s ease, border-radius 0.5s ease;
+    }
+
+    .it {
+        transition: background-color 0.5s ease, padding 0.5s ease, border-radius 0.5s ease;
+    }
+
+    .logo:hover,
+    .it:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 7px;
+        border-radius: 3px;
+    }
+
+    @media screen and (max-width:450px) {
+        .nav-items {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .it {
+            margin: 10px 0;
+        }
+
+        .hamburger-menu {
+            display: block;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sidebar-menu {
+            display: block;
+            cursor: pointer;
+        }
+    }
+</style>
+
+<div class="navbar">
+    <div class="container">
+        <div class="logo pointer">
+            <h3><b>Google</b></h3>
+        </div>
+        <div class="items">
+            <ul class="nav-items">
+                <li class="it">Home</li>
+                <li class="it">About us</li>
+                <li class="it">Services</li>
+                <li class="it">Contact us</li>
+            </ul>
+            <div class="hamburger-menu h">&#9776;</div>
+            <div class="sidebar-menu bgb h bgw">
+                <ul class="sidebar-items">
+                    <li class="side">Home</li>
+                    <li class="side">About us</li>
+                    <li class="side">Services</li>
+                    <li class="side">Contact us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

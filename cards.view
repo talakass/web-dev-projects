@@ -1,0 +1,338 @@
+<style>
+    .slider-card1,
+    .slider-card2,
+    .slider-card3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-direction: row;
+    }
+
+    .slider {
+        height: 8px;
+        border-radius: 100px;
+        background-color: rgba(46, 87, 98, 0.5);
+    }
+
+    .slider-1-card2,
+    .slider-2-card2,
+    .slider-3-card2,
+    .slider-4-card2 {
+        height: 8px;
+        border-radius: 100px;
+        background-color: rgba(46, 87, 98, 0.5);
+    }
+
+    .slider-1-card3,
+    .slider-2-card3,
+    .slider-3-card3,
+    .slider-4-card3 {
+        height: 8px;
+        border-radius: 100px;
+        background-color: rgba(46, 87, 98, 0.5);
+    }
+
+
+    .slider:hover {
+        background-color: #51DCFF;
+        cursor: pointer;
+
+    }
+
+    .slider.active {
+        background-color: #51DCFF;
+        cursor: pointer;
+    }
+
+    .slider-2:hover {
+        background-color: #FF8B42;
+        cursor: pointer;
+
+    }
+
+    .slider-2.active {
+        background-color: #FF8B42;
+        cursor: pointer;
+    }
+
+    .slider-3:hover {
+        background-color: #3FEDF3;
+        cursor: pointer;
+
+    }
+
+    .slider-3.active {
+        background-color: #3FEDF3;
+        cursor: pointer;
+    }
+
+
+    .foot {
+        background-color: #04161C;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .foot-icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        flex-direction: row;
+    }
+
+    .main {
+        min-height: 110vh;
+    }
+</style>
+
+<div class="main w100  cov"
+    style="background-image: url(https://images.pexels.com/photos/1536435/pexels-photo-1536435.jpeg); background-repeat: no-repeat;">
+    <grid_nm class="container cc">
+
+        <div class="w33 ph10 ">
+            <div class="card-1-bord p15" style="   background: rgb(86, 196, 229);
+            background: linear-gradient(160deg, rgba(86, 196, 229, 1) 0%, rgba(65, 162, 188, 1) 35%, rgba(21, 121, 156, 1) 100%);
+            border-radius: 2rem;">
+                <div class="card-1 vt">
+                    <div class="surf-image  land cov" style="background-image: url(https://images.squarespace-cdn.com/content/v1/55f45174e4b0fb5d95b07f39/1591353410540-Y3UIGYL2S0EDUKU7ZA2X/Steven+Chee+Grazia+Magazine+Alice+Topps+%281%29.jpg?format=750w); background-repeat: no repeat; border-top-right-radius: 1.5rem;
+                        border-top-left-radius: 1.5rem ">
+                        <div class="container l">
+                            <!-- <div class="overlay ov w100 h100" style=" opacity: 0.33;background-color:#000 ;"></div> -->
+                            <div class=" g_nm top-title fs13 b800 ph10 pv4 mt15"
+                                style="    background-image: linear-gradient(to right,rgb(0, 140, 255), rgb(0, 225, 255));border-radius: 40px; letter-spacing: 2px;">
+                                Surf</div>
+                            <grid_nm class="content-icons pt150">
+
+                                <div class="content w80 l pt150">
+                                    <div class="title-card-1 fs14 b" style=" color: #51DCFF; letter-spacing: 2px;">
+                                        portugal
+                                    </div>
+                                    <div class="title-2-card-1 fs30 cw">Ericeira</div>
+                                    <div class="text-card-1 fs12 b" style="color: #51DCFF; letter-spacing: 2px;">
+                                        Beautiful
+                                        swells
+                                        for the everyday surfer.</div>
+                                </div>
+                                <div class="icons w20 pl15">
+                                    <div class="map-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-map p5 lh20 "
+                                            style=" color: white; font-size: 28px;"></span>
+                                    </div>
+                                    <div class="wind-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-weather-windy p5 lh20 "
+                                            style=" color: white; font-size: 28px"></span>
+                                    </div>
+                                    <div class="heart-icon pv10 border roundc mt8" style=" width: 40px; height: 40px;">
+                                        <span class="mdi mdi-heart p5 lh20"
+                                            style=" color:white ; font-size: 28px"></span>
+                                    </div>
+                                    <div class="arrow-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-tray-arrow-up p5 lh20"
+                                            style=" color:white ; font-size: 28px"></span>
+                                    </div>
+                                </div>
+
+                            </grid_nm>
+
+                            <div class="slider-card1 pv20">
+                                <div class="slider-1-card1  slider w20 active" @click="swiper" data-id="1"></div>
+                                <div class="slider-2-card1  slider w20" @click="swiper" data-id="2"></div>
+                                <div class="slider-3-card1  slider w20" @click="swiper" data-id="3"></div>
+                                <div class="slider-4-card1  slider w20" @click="swiper" data-id="4"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="foot pv15">
+                        <div class="foot-icons pt10 mb5">
+                            <div class="location-icons">
+                                <span class="mdi mdi-map-marker"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="location-title" style="color: white;">Explore</div>
+                            </div>
+                            <div class="trip-icons">
+                                <span class="mdi mdi-airplane-takeoff"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="trip-title" style="color: white;">Trips</div>
+                            </div>
+                            <div class="profile-icons">
+                                <span class="mdi mdi-account-outline"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="profile-title" style="color: white;">Profile</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w33 ph10 ">
+            <div class=" card-2-bord p15" style=" background: rgb(221, 145, 30);
+            background: linear-gradient(152deg, rgba(221, 145, 30, 1) 0%, rgba(210, 171, 76, 1) 35%, rgba(167, 88, 41, 1) 100%);
+            border-radius: 2rem;">
+                <div class="card-2 vt">
+                    <div class="hike-image land cov" style="background-image: url(https://images.unsplash.com/photo-1596706269630-8f480cb67f12?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-repeat: no repeat; border-top-right-radius: 1.5rem;
+                        border-top-left-radius: 1.5rem ">
+                        <div class="container l">
+                            <!-- <div class="overlay ov w100 h100" style=" opacity: 0.33;background-color:#000 ;"></div> -->
+                            <div class=" g_nm top-title-2 fs13 b800 ph10 pv4 mt15"
+                                style=" background:linear-gradient(to right ,#FF8540,#FFC958); border-radius: 40px; letter-spacing: 2px;">
+                                Hike</div>
+                            <grid_nm class="content-icons pt150">
+
+                                <div class="content w80 l pt150">
+                                    <div class="title-card-2 fs14 b" style=" color: #FFDC5E; letter-spacing: 2px;">
+                                        Austria
+                                    </div>
+                                    <div class="title-2-card-2 fs30 cw">Wachau</div>
+                                    <div class="text-card-2 fs12 b" style="color: #FFDC5E; letter-spacing: 2px;">Hiking
+                                        trails
+                                        with
+                                        a shot of culture.</div>
+                                </div>
+                                <div class="icons w20 pl15">
+                                    <div class="map-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-map p5 lh20 "
+                                            style=" color: white; font-size: 28px;"></span>
+                                    </div>
+                                    <div class="wind-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-weather-windy p5 lh20 "
+                                            style=" color: white; font-size: 28px"></span>
+                                    </div>
+                                    <div class="heart-icon pv10 border roundc mt8" style=" width: 40px; height: 40px;">
+                                        <span class="mdi mdi-heart p5 lh20"
+                                            style=" color:white ; font-size: 28px"></span>
+                                    </div>
+                                    <div class="arrow-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-tray-arrow-up p5 lh20"
+                                            style=" color:white ; font-size: 28px"></span>
+                                    </div>
+                                </div>
+
+                            </grid_nm>
+
+                            <div class="slider-card2 pv20 ">
+                                <div class="slider-1-card2 slider-2 slider w20 active " @click="swiper" data-id="1_2">
+                                </div>
+                                <div class="slider-2-card2 slider-2 slider w20 " @click="swiper" data-id="2"></div>
+                                <div class="slider-3-card2 slider-2 slider w20 " @click="swiper" data-id="3"></div>
+                                <div class="slider-4-card2 slider-2 slider w20" @click="swiper" data-id="4"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="foot pv15">
+                        <div class="foot-icons pt10 mb5">
+                            <div class="location-icons">
+                                <span class="mdi mdi-map-marker"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="location-title" style="color: white;">Explore</div>
+                            </div>
+                            <div class="trip-icons">
+                                <span class="mdi mdi-airplane-takeoff"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="trip-title" style="color: white;">Trips</div>
+                            </div>
+                            <div class="profile-icons">
+                                <span class="mdi mdi-account-outline"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="profile-title" style="color: white;">Profile</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w33 ph10 ">
+            <div class=" card-3-bord p15" style="  background: rgb(52, 230, 231);
+            background: linear-gradient(160deg, rgba(52, 230, 231, 1) 0%, rgba(52, 230, 231, 1) 35%, rgba(26, 130, 137, 1) 100%);
+            border-radius: 2rem;">
+                <div class="card-3 vt">
+                    <div class="dive-image land cov" style="background-image: url(../images/card1_3.jpg); background-repeat: no repeat;  border-top-right-radius: 1.5rem;
+                        border-top-left-radius: 1.5rem">
+                        <div class="container l">
+                            <!-- <div class="overlay ov w100 h100" style=" opacity: 0.33;background-color:#000 ;"></div> -->
+                            <div class=" g_nm top-title-3 fs13 b800 ph10 pv4 mt15"
+                                style=" background-color: #34E6E7;border-radius: 40px; letter-spacing: 2px;">
+                                dive</div>
+                            <grid_nm class="content-icons pt150">
+
+                                <div class="content w80 l pt150">
+                                    <div class="title-card-3 fs14 b" style=" color: #51DCFF; letter-spacing: 2px;">
+                                        Malaysia
+                                    </div>
+                                    <div class="title-2-card-3 fs30 cw">Redang island</div>
+                                    <div class="text-card-3 fs12 b" style="color: #51DCFF; letter-spacing: 2px;">crystal
+                                        clear waters and white sandy beaches.</div>
+                                </div>
+                                <div class="icons w20 pl15">
+                                    <div class="map-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-map p5 lh20 "
+                                            style=" color: white; font-size: 28px;"></span>
+                                    </div>
+                                    <div class="wind-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-weather-windy p5 lh20 "
+                                            style=" color: white; font-size: 28px"></span>
+                                    </div>
+                                    <div class="heart-icon pv10 border roundc mt8" style=" width: 40px; height: 40px;">
+                                        <span class="mdi mdi-heart p5 lh20"
+                                            style=" color:white ; font-size: 28px"></span>
+                                    </div>
+                                    <div class="arrow-icon pv10 border roundc mt8" style="width: 40px; height: 40px;">
+                                        <span class="mdi mdi-tray-arrow-up p5 lh20"
+                                            style=" color:white ; font-size: 28px"></span>
+                                    </div>
+                                </div>
+
+                            </grid_nm>
+
+                            <div class="slider-card3 pv20 ">
+                                <div class="slider-1-card3 slider-3 slider w20 active" @click="swiper" data-id="1_3">
+                                </div>
+                                <div class="slider-2-card3 slider-3 slider w20" @click="swiper" data-id="2"></div>
+                                <div class="slider-3-card3 slider-3 slider w20" @click="swiper" data-id="3"></div>
+                                <div class="slider-4-card3 slider-3 slider w20" @click="swiper" data-id="4"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="foot pv15">
+                        <div class="foot-icons pt10 mb5">
+                            <div class="location-icons">
+                                <span class="mdi mdi-map-marker"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="location-title" style="color: white;">Explore</div>
+                            </div>
+                            <div class="trip-icons">
+                                <span class="mdi mdi-airplane-takeoff"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="trip-title" style="color: white;">Trips</div>
+                            </div>
+                            <div class="profile-icons">
+                                <span class="mdi mdi-account-outline"
+                                    style=" color: rgba(255, 255, 255, 0.5) ; font-size: 25px"></span>
+                                <div class="profile-title" style="color: white;">Profile</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </grid_nm>
+</div>
+
+<script>
+    function swiper(ev, el) {
+        let id = el.data('id');
+        var parent = el[0].closest('.land');
+        parent.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/card${id}.jpg)`;
+        var card = parent.querySelectorAll('.slider');
+        card.forEach(function (slider) {
+            slider.classList.remove('active');
+        })
+        el.addClass('active')
+
+    }
+
+
+</script>
