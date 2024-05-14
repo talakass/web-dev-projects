@@ -1,0 +1,227 @@
+<!--tala-->
+<style>
+  .footer {
+     background-color: #191d20; 
+    overflow: hidden;
+  }
+
+  .trademark {
+    color: #fa822f;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 13px;
+  }
+
+  .title-section-two,
+  .title-section-three {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 13px;
+  }
+
+  .categ-1,
+  .categ-2,
+  .categ-3,
+  .categ-5,
+  .categ-6,
+  .categ-4,
+  .address-1,
+  .address-2,
+  .telephone,
+  .text-1,
+  .info,
+  .text-section-three {
+    color: #8f979a;
+    cursor: pointer;
+  }
+
+  .categ-1:hover,
+  .categ-2:hover,
+  .categ-3:hover,
+  .categ-4:hover,
+  .categ-5:hover,
+  .categ-6:hover,
+  .address-1:hover,
+  .address-2:hover,
+  .telephone:hover,
+  .text-1:hover,
+  .info:hover,
+  .service-1:hover,
+  .service-2:hover,
+  .service-3:hover,
+  .service-4:hover,
+  .service-5:hover,
+  .service-6:hover,
+  .scm1:hover,
+  .scm2:hover,
+  .scm3:hover
+   {
+    color: white;
+    cursor: pointer;
+  }
+   .subscribe-input {
+    width: 70%;
+    padding-left: 10px;
+    border: 1px solid white;
+    line-height: 40px;
+    
+  } 
+  .subscribe-btn {
+    
+    cursor: pointer;
+    background-color: #fa822f;
+    color: white;
+    border: 1px solid #fa822f;
+    opacity: 1;
+    width: 28%;
+    padding: 10px;
+   
+   
+  }
+
+  .subscribe-btn:hover {
+    opacity: 0.7;
+  }
+
+  .social-media-icons {
+    color: #8f979a;
+   
+  }
+
+  .copyrights {
+    color: #8f979a47;
+    border-top: 1px solid #8f979a47;
+  }
+
+  .subscribe-form form{
+    display: flex;
+    gap : 5px;
+
+  }
+  .subscribe-form form .subscribe-btn{
+    display: flex;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+  }
+
+ 
+
+  
+
+  @media only screen and (max-width: 768px) {
+    
+    .subscribe-btn{
+      width: 30%;
+    }
+   
+    .section-one,
+    .section-two,
+    .section-three,
+    .newsletter-subscribe {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+    
+
+    .newsletter-title {
+      text-align: center;
+    
+    }
+
+    .newsletter-subscribe{
+      width: 70%;
+    }
+   
+    .social-media-icons{
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    
+    .section-one,
+    .section-two,
+    .section-three,
+    .newsletter-subscribe {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+    
+
+    .newsletter-title {
+      text-align: center;
+    
+    }
+
+    .newsletter-subscribe{
+      width: 100%;
+    }
+   
+    .social-media-icons{
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="footer pv20">
+  <div class="flexi">
+    <grid_nm>
+      <div class="section-one w20 p20 vt lh30 l">
+        <div class="trademark">logo</div>
+        <div class="text-section-one">
+          <div class="text-1">Customer supports:</div>
+          <div class="telephone">(629)555-0129</div>
+          <div class="address-1">4517 Washington Ave.</div>
+          <div class="address-2">Manchester, Kentucky 39495</div>
+          <div class="info">
+            <a href="info">info@clicon.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-two w20 p20 vt lh30 l">
+        <div class="title-section-two">TOP CATEGORY</div>
+        <div class="text-section-two">
+          <div class="categ-1">Computer & laptop</div>
+          <div class="categ-2">Smartphone</div>
+          <div class="categ-3">Headphone</div>
+          <div class="categ-4">Accessories</div>
+          <div class="categ-5">Camera & photo</div>
+          <div class="categ-6">TV & Homes</div>
+        </div>
+      </div>
+      <div class="section-three w20 p20 vt lh30 l">
+        <div class="title-section-three">QUICK LINKS</div>
+        <div class="text-section-three">
+          <div class="service-1">Shop Product</div>
+          <div class="service-2">Shoping Cart</div>
+          <div class="service-3">Wishlist</div>
+          <div class="service-4">Compare</div>
+          <div class="service-5">Track Order</div>
+          <div class="service-6">Customer Help</div>
+        </div>
+      </div>
+      <div class="newsletter-subscribe w40 p20 vt lh30 l ">
+        <div class="newsletter-title  b fs16 cw ">
+          Subscribe to our newsletter
+        </div>
+        <div class="subscribe-form pv20">
+          <form >
+            <input type="text" class="subscribe-input round2x" placeholder="Email" />
+             <button class="subscribe-btn cap  c round2x fs14 m_fs10 ">subscribe</button>
+          </form>
+        </div>
+        <div class="social-media-icons fs30  p20 pointer l pl1 ">
+          <span class=" scm1 mdi mdi-facebook pr5"></span>
+          <span class=" scm2 mdi mdi-instagram pr5"></span>
+          <span class=" scm3 mdi mdi-twitter pr5"></span>
+        </div>
+      </div>
+      <div class="copyrights fs16 l cw pv20 w100 c ">
+        <p>&copy; 2023 Clicon e-commerce. All rights reserved.</p>
+      </div>
+    </grid_nm>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<style>
+    @keyframes go {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(150px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+</style>
+<div class="main mhv100 pt20" style="background-color: #130022;">
+    <div class="container l">
+        <grid class="one mb30">
+            <div class="w20 b" style="color:white;">ease</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style=" animation: go 5s ease;"></span>
+            </div>
+        </grid>
+
+        <grid class="two mb30">
+            <div class="w20 b" style="color:white;">ease-in</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s ease-in;"></span>
+            </div>
+        </grid>
+
+        <grid class="three mb30">
+            <div class="w20 b" style="color:white;">ease-out</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s ease-out;"></span>
+            </div>
+        </grid>
+
+        <grid class="four mb30">
+            <div class="w20 b" style="color:white;">ease-in-out</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s ease-in-out;"></span>
+            </div>
+        </grid>
+
+        <grid class="five mb30">
+            <div class="w20 b" style="color:white;">linear</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s linear;"></span>
+            </div>
+        </grid>
+
+        <grid class="six mb30">
+            <div class="w20 b" style="color:white;">step-start</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s step-start;"></span>
+            </div>
+        </grid>
+
+        <grid class="seven mb30">
+            <div class="w20 b" style="color:white;">step-end</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s step-end;"></span>
+            </div>
+        </grid>
+
+        <grid class="eight mb30">
+            <div class="w20 b" style="color:white;">steps(4,end)</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s steps(4,end);"></span>
+            </div>
+        </grid>
+        <grid class="nine  mb30">
+            <div class="w20 b" style="color:white;">cubic-bezier(.26,1.02,1,-0.62)</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s cubic-bezier(.26,1.02,1,-0.62);"></span>
+            </div>
+        </grid>
+
+        <grid class="nine">
+            <div class="w20 b" style="color:white;">infinite</div>
+            <div class="w80">
+                <span class="iconify fs40" data-icon="streamline-emojis:man-dancing-2"
+                    style="animation: go 5s infinite;"></span>
+            </div>
+        </grid>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<style>
+    .progressive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn:hover {
+        opacity: 0.4;
+    }
+
+    .steps {
+        background-color: #FFFFFF;
+        height: 30px;
+        width: 30px;
+        border: 2px solid #3498DB;
+    }
+
+    .steps.active {
+        color: white;
+        background-color: #1c95e6;
+    }
+</style>
+
+<div class="main">
+    <div class="container">
+        <div class="progressive pv150">
+            <div class="line" style="width: 300px;height: 5px; background-color:#E0E0E0; border-radius: 20px;">
+                <div class="steps active roundc" id="step1">
+                    <span class="b fs18">1</span>
+                </div>
+                <div class="steps roundc" id="step2">
+                    <span class="b fs18">2</span>
+                </div>
+                <div class="steps roundc" id="step3">
+                    <span class="b fs18">3</span>
+                </div>
+                <div class="steps roundc" id="step4">
+                    <span class="b fs18">4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btns">
+        <button class=" btn prev p10 m10 cw pointer" style="background-color:  #3498DB;  border: 2px solid #3498DB;"
+            @click="prevStep">Prev</button>
+        <button class=" btn next p10 cw pointer" style="background-color:  #3498DB;  border: 2px solid #3498DB;"
+            @click="nextStep">Next</button>
+    </div>
+</div>
+
+<script>
+
+    var currentStep = 1;
+    var totalSteps = document.querySelectorAll('.steps').length;
+
+    function showStep(step) {
+        document.querySelectorAll('.steps').forEach((el) => {
+            el.classList.remove('active');
+        });
+
+        var currentStepElement = document.getElementById(`step${step}`);
+        currentStepElement.classList.add('active');
+    };
+
+    function prevStep(ev, el) {
+        if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    };
+
+    function nextStep(ev, el) {
+        if (currentStep < totalSteps) {
+            currentStep++;
+            showStep(currentStep);
+        }
+    };
+
+    document.getElementById('prev').addEventListener('click', prevStep);
+    document.getElementById('next').addEventListener('click', nextStep);
+
+</script>

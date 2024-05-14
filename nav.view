@@ -1,0 +1,498 @@
+<!--tala-->
+<style>
+  .top-carousel {
+    background-color: #191d20;
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .text-carousel {
+    color: white;
+    height: 40px;
+  }
+
+
+  .flipkart-section {
+    background-color: #1b6393;
+
+  }
+
+  .hamburger-menu {
+    position: relative;
+    display: none;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    list-style: none;
+    display: none;
+  }
+
+  .flipkart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70px;
+  }
+
+
+  .mark {
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .search-box {
+    flex: 1;
+    margin: 0 10px;
+    max-width: 500px;
+  }
+
+  .magnify {
+    right: 12px;
+    top: 8px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+  }
+
+  .home-sect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .section-categ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 60px;
+  }
+
+
+  .alcateg.show {
+    font-weight: bold;
+    background-color: #f2f4f6;
+    padding: 10px;
+  }
+
+  .menu_navv {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .menu_navv a {
+    padding: 10px 5px;
+  }
+
+  .menu_navv a:hover {
+    color: black;
+    font-weight: 550;
+    background-color: #f2f4f6;
+    transition: all 0.2s ease !important;
+  }
+
+  .products-lien a:hover {
+    color: black;
+    background-color: #f2f4f6;
+    padding: 10px;
+  }
+
+  .about-us:hover {
+    font-weight: bold;
+    background-color: #f2f4f6;
+    padding: 10px;
+  }
+
+  .contact-us:hover {
+    font-weight: bold;
+    background-color: #f2f4f6;
+    padding: 10px;
+  }
+
+  .News:hover {
+    font-weight: bold;
+    background-color: #f2f4f6;
+    padding: 10px;
+  }
+
+  .alcateg:hover {
+    font-weight: bold;
+    background-color: #f2f4f6;
+    padding: 10px;
+  }
+
+  .optional-sect {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .nav-category {
+    height: calc(100vh - 185px);
+    width: 300px;
+    top: 45px;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    body.top130 #menu {
+      top: 130px;
+    }
+
+    body.top160 #menu {
+      top: 160px;
+    }
+
+    body.top120 #menu {
+      top: 120px;
+    }
+
+    .section-categ {
+      flex-direction: column;
+    }
+
+    .home-sect {
+      flex-direction: column;
+    }
+
+    .side-navbar.flexi {
+      max-width: unset;
+      width: 250px;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      left: -250px;
+      background-color: white;
+      transition: 0.5s;
+    }
+
+    .menu_navv {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      cursor: pointer;
+      padding: 10px 0;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .flipkart {
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 120px;
+    }
+
+    .optional-sect {
+      order: 1;
+      margin-bottom: 10px;
+      margin-right: 22px;
+    }
+
+    .home-sect {
+      order: 2;
+    }
+
+    .mark-menu {
+      order: -1;
+      width: 50%;
+    }
+
+    .search-box {
+      width: 100%;
+      flex: 1;
+      margin: 0 10px;
+      max-width: 100%;
+    }
+
+    .search-box input[type="text"] {
+      order: 3;
+      width: 100%;
+
+    }
+
+    .icons {
+      order: -1;
+      width: 50%;
+    }
+
+    .hamburger-menu {
+      display: block;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      display: block;
+      padding: 10px;
+      font-size: 20px;
+      line-height: 1;
+      color: white;
+    }
+
+    .menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 200px;
+      background-color: #fff;
+      padding: 10px;
+      list-style: none;
+      display: none;
+    }
+
+    .side-navbar.show {
+      left: 0;
+
+    }
+
+    .all-categories-contain {
+      width: 100%;
+      z-index: 100;
+    }
+
+    .nav-category {
+      height: calc(100vh - 185px);
+      width: 100%;
+      top: 45px;
+    }
+
+  }
+
+  .navbar-white {
+    background-color: white;
+  }
+
+  .hide-carousel {
+    height: 0;
+  }
+
+  .profile-icon:hover .nav-profile {
+    display: block;
+
+  }
+
+  .language:hover .nav-lang {
+    display: block;
+  }
+
+  .currencies:hover .nav-currenc {
+    display: block;
+  }
+
+  .all-categories-contain:hover .nav-category {
+    display: block;
+  }
+
+  .arab:hover {
+    background-color: lightgray;
+  }
+
+  .eng:hover {
+    background-color: lightgray;
+  }
+
+  .lbp:hover {
+    background-color: lightgray;
+  }
+
+  .usd:hover {
+    background-color: lightgray;
+  }
+</style>
+
+<div class="main-section pf w100 z100 ">
+  <div>
+    <div class="top-carousel">
+      <div class="flexi">
+        <div class="text-carousel fs14 lh40">up to <span class="sale-number fs22" style="color:#ebc80c;">59% </span>OFF
+        </div>
+      </div>
+    </div>
+    <div class="flipkart-section">
+      <div class="flexi">
+        <div class="flipkart">
+          <div class="mark-menu" style="display: flex;gap:5px;align-items: center;">
+            <div class="hamburger-menu">
+              <div class="menu-icon" id="menu-icon" @click="toggleMenu">&#9776;</div>
+            </div>
+            <div class="mark">
+              <a href="/home">logo</a>
+            </div>
+          </div>
+          <div class="search-box">
+            <form>
+              <input type="text" style="
+              width: 100%;
+              max-width: 100%;
+              line-height: 38px;
+              padding-right: 35px;
+              padding-left: 10px;
+            " placeholder="Search for anything " />
+              <div class="magnify pa bgw fs20 ">
+                <span class="mdi mdi-magnify"></span>
+              </div>
+            </form>
+          </div>
+          <div class="icons">
+            <div class="trolley-icon">
+              <a href="/cart">
+                <span class="mdi mdi-cart-outline fs30 m_fs20 m_m_fs20" style=" color: whitesmoke"></span>
+              </a>
+
+            </div>
+            <div class="fav-icon">
+              <a href="/wishlist">
+                <span class="mdi mdi-heart-outline fs30  m_fs20 m_m_fs20" style=" color: whitesmoke"></span>
+              </a>
+            </div>
+            <div class="profile-icon">
+              <a href="/register/login">
+                <span class="mdi mdi-account-outline fs30  m_fs20 m_m_fs20" style=" color: whitesmoke"></span>
+              </a>
+              <div class="nav-profile pa r0 ph30 z100 bgw h">
+                <div class="pv10 fs16">logout</div>
+                <div class="pv10 fs16" id="openBtn">profile</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="menu" class="flexi side-navbar m_pv30 l">
+        <div class="pa pointer fs30 z30 h m_sb" @click="closeMenu" style="top: 20px; right: 20px;"><span class="iconify"
+            data-icon="mdi:window-close"></span></div>
+
+        <div class="section-categ  ">
+          <div class="home-sect  m_w100">
+            <div class="all-categories-contain" @click=>
+              <grid_nm class="all-categories m_w100">
+                <div class=" alcateg w90 fs16">All Categories</div>
+                <div class="w10 ez"><span class="iconify vm fs20 md_fs16" data-icon="mdi:chevron-down"></span></div>
+              </grid_nm>
+              <div class="nav-category pa l0 mr20 round2x border oya bgw h">
+                <div view="categories-side"></div>
+              </div>
+            </div>
+
+            <div class="menu_navv p10 m_w100">
+              <a href="/products">Products</a>
+              <a href="/aboutus">About Us</a>
+              <a href="/contactus">Contact Us</a>
+              <a href="/news">News</a>
+            </div>
+
+          </div>
+
+
+          <!--            
+            <div class="products-lien p10 m_w100">
+              <a href="/products">Products</a>
+            </div>
+            <div class="about-us p10 m_w100">
+              <a href="/aboutus">About Us</a>
+            </div>
+            <div class="contact-us p10 m_w100">
+              <a href="/contactus">Contact Us</a>
+            </div>
+            <div class="News p10 m_w100">
+              <a href="/news">News</a>
+            </div>
+          </div>
+       -->
+          <div class="optional-sect m_w100">
+            <span class="language ph10 ">EN
+              <span class="iconify vm fs20 md_fs16" data-icon="mdi:chevron-down"></span>
+              <div class="nav-lang pa  z200 bgw h r0 sh5 ">
+                <div class=" arab pv10 ph30 fs16 ">AR</div>
+                <div class=" eng pv10  ph30 fs16 ">EN</div>
+
+              </div>
+            </span>
+
+            <span class="currencies pl10">USD
+              <span class="iconify vm fs20 md_fs16" data-icon="mdi:chevron-down"></span>
+              <div class="nav-currenc pa  z200 bgw h r0 sh5">
+                <div class=" lbp pv10  ph30 fs16 ">LBP</div>
+                <div class=" usd pv10 ph30 fs16 ">USD</div>
+              </div>
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+
+  function toggleMenu(ev, el) {
+    let menu = $("#menu");
+    menu.toggleClass('show');
+  }
+  function closeMenu(ev, el) {
+    let menu = $("#menu");
+    menu.removeClass("show");
+  }
+
+  const navbar = document.querySelector('.main-section');
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 0) {
+      navbar.classList.add('navbar-white');
+    } else {
+      navbar.classList.remove('navbar-white');
+    }
+  });
+
+  const topCarousel = document.querySelector('.top-carousel');
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 0) {
+      topCarousel.classList.add('hide-carousel');
+    } else {
+      topCarousel.classList.remove('hide-carousel');
+    }
+  });
+</script>
